@@ -47,15 +47,15 @@ public class Game {
                 this.board = saved.board();
                 this.playerName = saved.playerName();
                 System.out.println("Mentett játék betöltve TXT alapján");
+                if (this.playerName != null && !this.playerName.isBlank()) System.out.println("Játékos: " + this.playerName);
                 LOGGER.info("Loaded saved game for player={}", this.playerName);
             } else {
-                // nincs mentett jatek -> uj tabla
+                // --- nincs mentett jatek -> uj tabla
                 System.out.println("Új játék létrehozása. (Nincs mentett játék.)");
                 int rows = readIntInRange("Sorok száma: ", 4, 25);
                 int cols = readIntInRange("Oszlopok száma: ", 4, rows);
                 this.board = new Board(rows, cols);
-                // After the automatic X is placed by the Board constructor,
-                // immediately make one AI move so the human sees both X and O
+                // Logika miatt ha rogton x kezd, kell ra valasz az AI-tol is o-val.
                 Position immediateAi = this.board.randomAImove();
                 if (immediateAi != null) this.board.makeMove(new Move(immediateAi, Cell.O));
                 System.out.print("Játékos neve: ");
@@ -65,14 +65,13 @@ public class Game {
         }
     }
 
-    // --- start: egybol jatek inditasa (nincs fo menu)
+    // --- start: jatek inditasa
     public void start() {
-        // elinditjuk a jatekot a betoltott vagy uj palyan
         boolean exit = playGame(this.board, this.playerName);
         if (exit) return;
     }
 
-    // --- jatek vegrehajtasa; visszater true-val ha a felhasznalo az exit parancsot adta ossze (kilep a programbol)
+    // --- jatek vegrehajtasa; visszater true-val ha a felhasznalo az exit parancsot adta vissza
     private boolean playGame(Board boardToPlay, String playerName) {
         this.board = boardToPlay;
         while (true) {
@@ -89,7 +88,7 @@ public class Game {
                     // txt save failed
                 }
                 try {
-                    XmlBoardIO.save(board, Path.of("board.xml"));
+                    XmlBoardIO.save(board, Path.of("board.xml"), playerName);
                     xmlOk = true;
                 } catch (IOException ignored) {
                     // xml save failed
@@ -112,18 +111,18 @@ public class Game {
                 return true; // kilep a programbol
             }
 
-            // human move
+            // --- user lepes
             try {
                 int col = cmd.charAt(0) - 'a';
                 int row = Integer.parseInt(cmd.substring(1)) - 1;
                 Position pos = new Position(row, col);
                 if (!board.legalMove(pos)) {
-                    System.out.println("Illegal move");
+                    System.out.println("Hibas lepes");
                     continue;
                 }
                 board.makeMove(new Move(pos, Cell.X));
             } catch (RuntimeException e) {
-                System.out.println("Invalid input");
+                System.out.println("Hibás input, próbáld újra. (pl: B3)");
                 continue;
             }
 
@@ -146,13 +145,23 @@ public class Game {
             if (board.winCheck(Cell.O)) {
                 board.print();
                 System.out.println("O nyert");
-                // remove any saved state files so the finished match cannot be resumed
+                // toroljuk a mentettet ha vegigment a meccs
                 try { Files.deleteIfExists(Path.of("board.xml")); } catch (IOException ignored) {}
                 try { Files.deleteIfExists(Path.of("board.txt")); } catch (IOException ignored) {}
                 return true; // kilep a programbol
             }
+
+            // --- Ha nincs tobb EMPTY mezo, akkor dontetlen es kilep
+            if (board.isFull()) {
+                board.print();
+                System.out.println("Döntetlen");
+                try { Files.deleteIfExists(Path.of("board.xml")); } catch (IOException ignored) {}
+                try { Files.deleteIfExists(Path.of("board.txt")); } catch (IOException ignored) {}
+                return true;
+            }
         }
     }
+    // --- input helper sor/oszlop letrehozaskor, ellenorzi az ertekeket.
     private int readIntInRange(String prompt, int min, int max) {
         while (true) {
             System.out.print(prompt);
@@ -160,12 +169,12 @@ public class Game {
             try {
                 int value = Integer.parseInt(line);
                 if (value < min || value > max) {
-                    System.out.println("Ervenytelen, maradjon " + min + " es " + max + " kozott.");
+                    System.out.println("Érvénytelen, maradjon " + min + " és " + max + " között.");
                     continue;
                 }
                 return value;
             } catch (NumberFormatException e) {
-                System.out.println("Ervenytelen szam.");
+                System.out.println("Érvénytelen szám.");
             }
         }
     }

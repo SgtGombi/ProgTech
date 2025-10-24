@@ -10,10 +10,10 @@ import hu.gombi.amoba.model.records.Position;
 
 public class TextBoardIO {
 
-    // small holder for loaded board + player name, nested here so no separate class file is needed
+    // --- segedosztaly ami mentett board+jatekos nevet tartalmaz ---
     public static record SavedGame(hu.gombi.amoba.model.Board board, String playerName) {}
 
-    // --- save fv. now includes player name on first line as: PLAYER:<name>
+    // --- txt mentés, jatekosnev a tetejen. ---
     public static void save(Board board, Path path, String playerName) throws java.io.IOException {
         StringBuilder sb = new StringBuilder();
         sb.append("PLAYER:").append(playerName).append(System.lineSeparator());
@@ -24,12 +24,7 @@ public class TextBoardIO {
         Files.writeString(path, sb.toString());
     }
 
-    // backward-compatible save (no name)
-    public static void save(Board board, Path path) throws java.io.IOException {
-        save(board, path, "");
-    }
-
-    // --- load fv. returns a SavedGame (board + playerName). If file missing or error, returns null.
+    // --- load fv.: betolti a savedgame altal mentett jatekot
     public static SavedGame load(Path path) throws java.io.IOException {
         if (!Files.exists(path)) return null;
         var lines = Files.readAllLines(path);

@@ -149,4 +149,14 @@ public class Board {
             System.out.println();
         }
     }
+
+    // --- ellenorzi hogy van-e meg EMPTY mezo
+    public boolean isFull() {
+        for (int r = 0; r < rows; r++) {
+            for (int c = 0; c < cols; c++) {
+                if (cells[r][c] == Cell.EMPTY) return false;
+            }
+        }
+        return true;
+    }
 }

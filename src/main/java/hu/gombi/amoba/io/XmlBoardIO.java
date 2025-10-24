@@ -14,7 +14,7 @@ public class XmlBoardIO {
 
     public static record SavedGame(Board board, String playerName) {}
 
-    // save with player name
+    // --- save fv xml-be, player nevet is menti
     public static void save(Board b, Path p, String playerName) throws IOException {
         StringBuilder sb = new StringBuilder();
         sb.append("<game>\n");
@@ -34,11 +34,7 @@ public class XmlBoardIO {
         Files.writeString(p, sb.toString());
     }
 
-    // backward-compatible save
-    public static void save(Board b, Path p) throws IOException {
-        save(b, p, "");
-    }
-
+    // --- load fv.: betolti a savedgame altal mentett jatekot
     public static SavedGame load(Path p) throws IOException {
         if (!Files.exists(p)) return null;
         List<String> lines = Files.readAllLines(p);
@@ -75,7 +71,7 @@ public class XmlBoardIO {
         if (b == null && rows>0 && cols>0) b = new Board(rows, cols);
         return new SavedGame(b, playerName);
     }
-
+    // --- xml spec karakterek escapelésére
     private static String escapeXml(String s) {
         if (s == null) return "";
         return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace("\"", "&quot;").replace("'", "&apos;");

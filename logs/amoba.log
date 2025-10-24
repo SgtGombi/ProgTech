@@ -58,3 +58,172 @@
 2025-10-24 15:18:08.367 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
 2025-10-24 15:18:08.387 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
 2025-10-24 15:18:08.396 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Winner
+2025-10-24 15:21:10.049 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerMain
+2025-10-24 15:21:11.678 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=Saver
+2025-10-24 15:21:11.698 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Tester
+2025-10-24 15:21:11.711 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerName
+2025-10-24 15:21:11.757 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 15:21:11.782 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 15:21:11.793 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Winner
+2025-10-24 15:38:10.111 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerMain
+2025-10-24 15:38:11.810 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=Saver
+2025-10-24 15:38:11.831 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Tester
+2025-10-24 15:38:11.842 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerName
+2025-10-24 15:38:11.891 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 15:38:11.910 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 15:38:11.919 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Winner
+2025-10-24 16:14:04.570 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerMain
+2025-10-24 16:14:06.334 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=Saver
+2025-10-24 16:14:06.356 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Tester
+2025-10-24 16:14:06.369 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerName
+2025-10-24 16:14:06.414 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 16:14:06.435 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 16:14:06.447 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Winner
+2025-10-24 16:15:00.209 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerMain
+2025-10-24 16:15:02.537 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=Saver
+2025-10-24 16:15:02.567 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Tester
+2025-10-24 16:15:02.579 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerName
+2025-10-24 16:15:02.625 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 16:15:02.644 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 16:15:02.653 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Winner
+2025-10-24 16:19:15.271 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerMain
+2025-10-24 16:19:17.012 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=Saver
+2025-10-24 16:19:17.033 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Tester
+2025-10-24 16:19:17.044 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerName
+2025-10-24 16:19:17.083 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 16:19:17.102 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 16:19:17.112 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Winner
+2025-10-24 16:19:38.587 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=5, cols=5, player=gombi
+2025-10-24 16:19:51.598 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=
+2025-10-24 16:21:56.088 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=
+2025-10-24 16:21:58.061 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=Saver
+2025-10-24 16:21:58.088 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Tester
+2025-10-24 16:21:58.105 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerName
+2025-10-24 16:21:58.189 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 16:21:58.216 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 16:21:58.232 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Winner
+2025-10-24 16:22:12.679 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=5, cols=5, player=gombi
+2025-10-24 16:22:18.569 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=
+2025-10-24 16:25:37.526 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=
+2025-10-24 16:25:39.265 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=Saver
+2025-10-24 16:25:39.287 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Tester
+2025-10-24 16:25:39.297 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerName
+2025-10-24 16:25:39.336 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 16:25:39.355 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 16:25:39.365 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Winner
+2025-10-24 16:25:55.298 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=5, cols=5, player=gombi
+2025-10-24 16:26:08.556 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=gombi
+2025-10-24 16:26:25.371 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=5, cols=5, player=d
+2025-10-24 16:57:51.428 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerMain
+2025-10-24 16:57:53.478 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=Saver
+2025-10-24 16:57:53.508 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Tester
+2025-10-24 16:57:53.524 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerName
+2025-10-24 16:57:53.570 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 16:57:53.592 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 16:57:53.620 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Winner
+2025-10-24 16:58:11.688 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerMain
+2025-10-24 16:58:13.441 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=Saver
+2025-10-24 16:58:13.464 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Tester
+2025-10-24 16:58:13.475 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerName
+2025-10-24 16:58:13.513 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 16:58:13.540 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 16:58:13.568 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Winner
+2025-10-24 16:59:28.664 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerMain
+2025-10-24 16:59:30.340 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=Saver
+2025-10-24 16:59:30.360 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Tester
+2025-10-24 16:59:30.371 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerName
+2025-10-24 16:59:30.407 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 16:59:30.426 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 16:59:30.453 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Winner
+2025-10-24 17:00:19.296 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerMain
+2025-10-24 17:00:20.904 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=Saver
+2025-10-24 17:00:20.924 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Tester
+2025-10-24 17:00:20.936 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerName
+2025-10-24 17:00:20.977 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 17:00:20.997 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 17:00:21.008 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Winner
+2025-10-24 17:00:40.407 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerMain
+2025-10-24 17:00:42.138 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=Saver
+2025-10-24 17:00:42.157 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Tester
+2025-10-24 17:00:42.168 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerName
+2025-10-24 17:00:42.204 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 17:00:42.224 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 17:00:42.234 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Winner
+2025-10-24 17:00:57.188 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerMain
+2025-10-24 17:00:58.972 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=Saver
+2025-10-24 17:00:58.998 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Tester
+2025-10-24 17:00:59.013 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerName
+2025-10-24 17:00:59.057 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 17:00:59.083 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 17:00:59.093 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Winner
+2025-10-24 17:02:10.066 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerMain
+2025-10-24 17:02:11.852 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=Saver
+2025-10-24 17:02:11.872 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Tester
+2025-10-24 17:02:11.884 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerName
+2025-10-24 17:02:11.943 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 17:02:11.965 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 17:02:11.974 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Winner
+2025-10-24 17:02:36.132 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerMain
+2025-10-24 17:02:38.035 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=Saver
+2025-10-24 17:02:38.056 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Tester
+2025-10-24 17:02:38.068 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerName
+2025-10-24 17:02:38.131 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 17:02:38.152 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 17:02:38.161 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Winner
+2025-10-24 17:04:23.061 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerName
+2025-10-24 17:05:27.280 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerMain
+2025-10-24 17:05:29.116 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=Saver
+2025-10-24 17:05:29.135 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Tester
+2025-10-24 17:05:29.146 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerName
+2025-10-24 17:05:29.210 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 17:05:29.229 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 17:05:29.239 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Winner
+2025-10-24 17:06:45.276 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerName
+2025-10-24 17:07:35.534 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerName
+2025-10-24 17:07:45.132 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerMain
+2025-10-24 17:07:47.002 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=Saver
+2025-10-24 17:07:47.023 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Tester
+2025-10-24 17:07:47.035 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerName
+2025-10-24 17:07:47.078 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 17:07:47.099 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 17:07:47.108 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Winner
+2025-10-24 17:08:10.010 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerMain
+2025-10-24 17:08:11.783 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=Saver
+2025-10-24 17:08:11.804 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Tester
+2025-10-24 17:08:11.816 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerName
+2025-10-24 17:08:11.855 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 17:08:11.874 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 17:08:11.881 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Winner
+2025-10-24 17:08:25.327 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=5, cols=5, player=asd
+2025-10-24 17:08:47.508 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=gombi
+2025-10-24 17:08:56.606 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=gombi
+2025-10-24 17:13:08.105 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=gombi
+2025-10-24 17:13:09.778 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=Saver
+2025-10-24 17:13:09.800 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Tester
+2025-10-24 17:13:09.812 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerName
+2025-10-24 17:13:09.856 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 17:13:09.874 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 17:13:09.885 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Winner
+2025-10-24 17:35:19.567 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerMain
+2025-10-24 17:35:21.577 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=Saver
+2025-10-24 17:35:21.598 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Tester
+2025-10-24 17:35:21.612 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerName
+2025-10-24 17:35:21.656 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 17:35:21.675 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 17:35:21.683 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Winner
+2025-10-24 17:35:54.857 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerMain
+2025-10-24 17:35:56.900 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=Saver
+2025-10-24 17:35:56.925 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Tester
+2025-10-24 17:35:56.939 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerName
+2025-10-24 17:35:56.983 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 17:35:57.007 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 17:35:57.017 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Winner
+2025-10-24 17:38:08.184 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerMain
+2025-10-24 17:38:10.068 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=Saver
+2025-10-24 17:38:10.088 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Tester
+2025-10-24 17:38:10.101 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=4, cols=4, player=PlayerName
+2025-10-24 17:38:10.145 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 17:38:10.164 [main] INFO  hu.gombi.amoba.Game - Loaded saved game for player=P
+2025-10-24 17:38:10.173 [main] INFO  hu.gombi.amoba.Game - Loaded saved game from XML, player=Winner
+2025-10-24 17:38:24.847 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=5, cols=5, player=gombi
+2025-10-24 17:38:40.306 [main] INFO  hu.gombi.amoba.Game - Starting new game: rows=5, cols=5, player=g

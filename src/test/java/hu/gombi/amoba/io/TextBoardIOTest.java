@@ -14,18 +14,21 @@ import hu.gombi.amoba.model.Cell;
 import hu.gombi.amoba.model.records.Move;
 import hu.gombi.amoba.model.records.Position;
 
+// --- Ez az osztaly teszteli a TextBoardIO osztalyt
 public class TextBoardIOTest {
 
     private final Path testFile = Path.of("target", "test-board.txt");
 
+    // --- Minden teszt utan takaritja a fajlt
     @AfterEach
     public void cleanup() throws Exception {
         try { Files.deleteIfExists(testFile); } catch (Exception e) { /* ignore */ }
     }
 
+    // --- Ez a teszt ellenorzi a save es load metodusok koruli fordulot
     @Test
     public void saveAndLoadRoundtripIncludesPlayerName() throws Exception {
-    Board b = new Board(5,4);
+        Board b = new Board(5,4);
         b.makeMove(new Move(new Position(0,0), Cell.X));
         b.makeMove(new Move(new Position(1,2), Cell.O));
         String player = "TesztJatekos";
@@ -37,10 +40,11 @@ public class TextBoardIOTest {
         Board loaded = sg.board();
         assertEquals(Cell.X, loaded.cellAt(0,0));
         assertEquals(Cell.O, loaded.cellAt(1,2));
-        // ensure other cells are empty
+        // --- Biztosítja, hogy a tobbi cella ures
         assertEquals(Cell.EMPTY, loaded.cellAt(0,1));
     }
 
+    // --- Ez a teszt ellenorzi a hianyzo fajl betolteset
     @Test
     public void loadMissingFileReturnsNull() throws Exception {
         Files.deleteIfExists(testFile);
