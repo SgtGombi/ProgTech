@@ -1,10 +1,10 @@
 package hu.gombi.amoba.model;
-import hu.gombi.amoba.model.records.Move;
-import hu.gombi.amoba.model.records.Position;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+
+import hu.gombi.amoba.model.records.Move;
+import hu.gombi.amoba.model.records.Position;
 
 public class Board {
     private final int rows;
@@ -31,13 +31,18 @@ public class Board {
             }
         }
         // --- FELADATLEIRAS: palya EGYIK kozepso mezojere tesz automatikusan
-        // --- páros/páratlan esetén másképp számolom a középső zónát
         Random random = new Random();
         int xStartRow, xStartCol;
-        if (rows % 2 == 0) xStartRow = rows / 2 - 1 + random.nextInt(3);
-        else xStartRow = rows / 2 + random.nextInt(3);
-        if (cols % 2 == 0) xStartCol = cols / 2 - 1 + random.nextInt(3);
-        else xStartCol = cols / 2 + random.nextInt(3);
+        if (rows % 2 == 0) {
+            xStartRow = rows / 2 - 1 + random.nextInt(2); // yields rows/2-1 or rows/2
+        } else {
+            xStartRow = rows / 2; // exact center for odd
+        }
+        if (cols % 2 == 0) {
+            xStartCol = cols / 2 - 1 + random.nextInt(2);
+        } else {
+            xStartCol = cols / 2;
+        }
         cells[xStartRow][xStartCol] = Cell.X;
     }
 
