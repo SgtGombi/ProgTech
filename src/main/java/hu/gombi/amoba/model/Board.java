@@ -56,7 +56,7 @@ public class Board {
 
     // --- clean code: a lepes es az ellenorzesek kulonvalasztva
     // --- lepes vegrehajtasa
-    public void MakeMove(Move move) {
+    public void makeMove(Move move) {
         Position pos = move.pos();
         cells[pos.row()][pos.col()] = move.symbol();
     }
@@ -104,7 +104,7 @@ public class Board {
     }
 
     // --- win ellenorzes
-    public boolean WinCheck(Cell symbol) {
+    public boolean winCheck(Cell symbol) {
         char character = symbol.getCharacter();
         int[][] directions = {{1, 0}, {0, 1}, {1, 1}, {1, -1}};
 
