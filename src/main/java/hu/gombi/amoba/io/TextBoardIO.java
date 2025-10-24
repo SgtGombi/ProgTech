@@ -1,6 +1,5 @@
 package hu.gombi.amoba.io;
 
-import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
@@ -15,7 +14,7 @@ public class TextBoardIO {
     public static record SavedGame(hu.gombi.amoba.model.Board board, String playerName) {}
 
     // --- save fv. now includes player name on first line as: PLAYER:<name>
-    public static void save(Board board, Path path, String playerName) throws IOException {
+    public static void save(Board board, Path path, String playerName) throws java.io.IOException {
         StringBuilder sb = new StringBuilder();
         sb.append("PLAYER:").append(playerName).append(System.lineSeparator());
         for (int row = 0; row < board.getRows(); row++) {
@@ -26,12 +25,12 @@ public class TextBoardIO {
     }
 
     // backward-compatible save (no name)
-    public static void save(Board board, Path path) throws IOException {
+    public static void save(Board board, Path path) throws java.io.IOException {
         save(board, path, "");
     }
 
-    // --- load fv. returns a SavedGame (board + playerName). If file missing, returns null.
-    public static SavedGame load(Path path) throws IOException {
+    // --- load fv. returns a SavedGame (board + playerName). If file missing or error, returns null.
+    public static SavedGame load(Path path) throws java.io.IOException {
         if (!Files.exists(path)) return null;
         var lines = Files.readAllLines(path);
         if (lines.isEmpty()) return null;

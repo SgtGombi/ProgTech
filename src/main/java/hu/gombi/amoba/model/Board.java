@@ -14,9 +14,8 @@ public class Board {
     public Board(int rows, int cols) {
         // --- FELADATLEIRAS: 4 <=M <= N <=25
         // --- kulon kezeljuk a hibas tablameretet, pontos hibauzenet a usernek
-        if (cols < 4 || cols > 25) throw new IllegalArgumentException("A sorok számának 4 és 25 között kell lennie!");
-        if (rows < 4 || rows > 25)
-            throw new IllegalArgumentException("Az oszlopook számának 4 és 25 között kell lennie!");
+        if (cols < 4 || cols > 25) throw new IllegalArgumentException("Az oszlopok számának 4 és 25 között kell lennie!");
+        if (rows < 4 || rows > 25) throw new IllegalArgumentException("A sorok számának 4 és 25 között kell lennie!");
         if (cols > rows) throw new IllegalArgumentException("Az oszlopok száma nem lehet nagyobb a sorok számánál!");
 
         // --- konstruktor
@@ -124,7 +123,8 @@ public class Board {
                         r += dir[0];
                         c += dir[1];
                     }
-                    if (count >= 5) return true;
+                    // win when there are 4 in a row (changed requirement)
+                    if (count >= 4) return true;
                 }
             }
         }
