@@ -34,7 +34,7 @@ public class Highscore implements AutoCloseable {
         }
         return res;
     }
-
+    // --- db bezaras
     @Override
     public void close() throws Exception { conn.close(); }
 }

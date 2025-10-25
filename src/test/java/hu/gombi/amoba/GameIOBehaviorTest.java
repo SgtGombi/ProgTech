@@ -33,14 +33,13 @@ public class GameIOBehaviorTest {
         Files.deleteIfExists(Path.of("highscores.db"));
     }
 
-    // --- Ez a teszt ellenorzi az uj jatek prompt-jait es ervenytelen bemeneteket
+    // --- ez a teszt ellenorzi az uj jatek prompt-jait es ervenytelen bemeneteket
     @Test
     void newGame_promptsForSizes_and_handlesInvalidInputs() throws Exception {
-        // --- Biztosítja, hogy nincs mentett jatek
         Files.deleteIfExists(Path.of("board.xml"));
         Files.deleteIfExists(Path.of("board.txt"));
 
-        // --- Ad ervenytelen majd ervenyes sorokat/oszlopokat, majd jatekos nevet, kilepes
+        // --- ad ervenytelen majd ervenyes sorokat/oszlopokat, majd jatekos nevet, kilepes
         String inputs = "notnum\n3\n4\n10\n4\nPlayerName\nx\n";
         System.setIn(new ByteArrayInputStream(inputs.getBytes()));
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
@@ -54,15 +53,15 @@ public class GameIOBehaviorTest {
         assertTrue(out.contains("Érvénytelen"), "Output does not contain invalid input message. Full output: " + out);
     }
 
-    // --- Ez a teszt ellenorzi, hogy az illegalis lepes jelentve van
+    // --- ellenorzi, hogy az illegalis lepes jelentve van
     @Test
     void illegalMove_isReported() throws Exception {
-        // --- Letrehoz es ment egy friss tablat egy lepes nelkul
+        // --- letrehoz es ment egy friss tablat egy lepes nelkul
         Board b = new Board(4, 4);
         b.makeMove(new Move(new Position(0, 0), Cell.X));
         TextBoardIO.save(b, Path.of("board.txt"), "P");
 
-        // --- Megkeresi a letezo X poziciojat egy illegalis probalkozashoz
+        // --- megkeresi a letezo X poziciojat egy illegalis probalkozashoz
         int rx = -1, cx = -1;
         for (int r = 0; r < b.getRows(); r++) {
             for (int c = 0; c < b.getCols(); c++) {
@@ -88,14 +87,14 @@ public class GameIOBehaviorTest {
         assertTrue(out.contains("Hibas lepes"), "Attempting to play on occupied cell should print Hibas lepes");
     }
 
-    // --- Ez a teszt ellenorzi a results parancsot es a highscore-okat
+    // --- ellenorzi a results parancsot es a highscore-okat
     @Test
     void resultsCommand_printsHighscores() throws Exception {
-        // --- Elokeszit egy mentett tablat
+        // --- elokeszit egy mentett tablat
         Board b = new Board(4, 4);
         TextBoardIO.save(b, Path.of("board.txt"), "P");
 
-        // --- Elokeszit highscores.db-t
+        // --- elokeszit highscores.db-t
         try (hu.gombi.amoba.db.Highscore repo = new hu.gombi.amoba.db.Highscore("jdbc:sqlite:highscores.db")) {
             repo.addWin("Zoli");
             repo.addWin("Anna");
@@ -135,7 +134,7 @@ public class GameIOBehaviorTest {
         assertTrue(out.contains("Játékos: Tester"));
     }
 
-    // --- Ez a teszt ellenorzi a save parancsot es a fajlok irasat
+    // --- ez a teszt ellenorzi a save parancsot es a fajlok irasat
     @Test
     void saveCommand_writesBothTxtAndXmlFiles() throws Exception {
         Board b = new Board(4, 4);
@@ -151,7 +150,7 @@ public class GameIOBehaviorTest {
         Game g = new Game();
         g.start();
 
-        // --- Mindket fajl letezik
+        // --- mindket fajl letezik
         assertTrue(Files.exists(Path.of("board.txt")), "board.txt should exist after save");
         assertTrue(Files.exists(Path.of("board.xml")), "board.xml should exist after save");
 
@@ -161,12 +160,11 @@ public class GameIOBehaviorTest {
         assertTrue(txt.startsWith("PLAYER:"));
     }
 
-    // --- Ez a teszt ellenorzi a human lepes nyereset es fajlok torleset
+    // --- ez a teszt ellenorzi a human lepes nyereset es fajlok torleset
     @Test
     void humanMove_canWin_and_removesSaveFiles() throws Exception {
-        // --- Letrehoz egy tablat ahol X-nek 3 van sorban es a 4. szabad
+        // --- letrehoz egy tablat ahol X-nek 3 van sorban es a 4. szabad
         Board b = new Board(4, 4);
-        // --- Helyez X-et (0,0),(0,1),(0,2)
         b.makeMove(new Move(new Position(0,0), Cell.X));
         b.makeMove(new Move(new Position(0,1), Cell.X));
         b.makeMove(new Move(new Position(0,2), Cell.X));

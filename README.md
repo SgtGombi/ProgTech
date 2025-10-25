@@ -1,5 +1,11 @@
 # Amőba Játék
 
+## Futtatás:
+- Futtatáshoz git clone, java és maven szükséges.
+- mvn clean install
+- java -jar .\target\amoba-{VERZIÓ SZÁMA}-{VERZIÓ NEVE}-jar-with-dependencies.jar
+- Jelenleg: java -jar .\target\amoba-1.1-BACON-jar-with-dependencies.jar
+
 ## FONTOS MEGJEGYZÉSEK:
 - Nem tiszta a feladatleírás: a legkisebb tábla 4x4 lehet, szövegben elsőnek az van megadva hogy 5-öt kell csatlakoztatni, majd alatta nem sokkal hogy "Connect 4". Ha 5-el csinálom, a 4x4-es táblán csak keresztbe lehet nyerni, kétlem hogy ez lett volna a cél.
 KÖVETKEZTETÉS: 4-es connect a játékszabályom, bármikor módosítható 5-re.
@@ -14,46 +20,51 @@ KÖVETKEZTETÉS: Mivel szigorúan automatikus x kezdés van, aztán meg a gép j
 
 ## Projekt történet:
 ### Részletes történet a GITHUB-on!
-- 2025.10.19: git repo létrehozása, "first upload" push: alap Java/Maven + README.md
-- 2025.10.22: modelszerkezet készítése, records külön mappába, kezdetleges board model.
-- 2025.10.23: befejezett board model + alap Game.java
-- 2025.10.24: Első futtatások, emiatt sok bugfix: kiiratás problémák, mentési problémák, játékosnév bug, alap logikai hibák, stb. Ezen felül testek maximalizálása a 80%-hoz.
+
 
 ## Mappaszerkezet
-amoba/
-├── pom.xml
-├── README.md
-├── logs/
-├── src/
-│   ├── main/java/hu/gombi/amoba/
-│   │   ├── Amoba.java
-│   │   ├── Game.java
-│   │   ├── db/
-│   │   │   └── Highscore.java
-│   │   ├── io/
-│   │   │   ├── TextBoardIO.java
-│   │   │   └── XmlBoardIO.java
-│   │   └── model/
-│   │       ├── Board.java
-│   │       ├── Cell.java
-│   │       └── records/
-│   │           ├── Move.java
-│   │           ├── Player.java
-│   │           └── Position.java
-│   └── test/java/hu/gombi/amoba/
-│       ├── AmobaMainTest.java
-│       ├── GameIOBehaviorTest.java
-│       ├── db/
-│       │   ├── HighscoreMockitoTest.java
-│       │   └── HighscoreTest.java
-│       ├── io/
-│       │   ├── TextBoardIOExtraTest.java
-│       │   ├── TextBoardIOTest.java
-│       │   └── XmlBoardIOExtraTest.java
-│       └── model/
-│           ├── BoardTest.java
-│           └── CellTest.java
-└── target/
+- amoba/
+  - pom.xml
+  - README.md
+  - logs/
+  - src/
+    - main/
+      - java/
+        - hu/
+          - gombi/
+            - amoba/
+              - Amoba.java
+              - Game.java
+              - db/
+                - Highscore.java
+              - io/
+                - TextBoardIO.java
+                - XmlBoardIO.java
+              - model/
+                - Board.java
+                - Cell.java
+                - records/
+                  - Move.java
+                  - Player.java
+                  - Position.java
+    - test/
+      - java/
+        - hu/
+          - gombi/
+            - amoba/
+              - AmobaMainTest.java
+              - GameIOBehaviorTest.java
+              - db/
+                - HighscoreMockitoTest.java
+                - HighscoreTest.java
+              - io/
+                - TextBoardIOExtraTest.java
+                - TextBoardIOTest.java
+                - XmlBoardIOExtraTest.java
+              - model/
+                - BoardTest.java
+                - CellTest.java
+  - target/
     └── ...
 
 ## Fájlok leírása

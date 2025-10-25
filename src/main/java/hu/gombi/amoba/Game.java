@@ -52,10 +52,11 @@ public class Game {
             } else {
                 // --- nincs mentett jatek -> uj tabla
                 System.out.println("Új játék létrehozása. (Nincs mentett játék.)");
-                int rows = readIntInRange("Sorok száma: ", 4, 25);
-                int cols = readIntInRange("Oszlopok száma: ", 4, rows);
+                int cols = readIntInRange("Oszlopok száma (4-25): ", 4, 25);
+                int rows = readIntInRange("Sorok száma (" + cols + "-25): ", cols, 25);
                 this.board = new Board(rows, cols);
-                // Logika miatt ha rogton x kezd, kell ra valasz az AI-tol is o-val.
+
+                // --- logika miatt ha rogton x kezd, kell ra valasz az AI-tol is o-val.
                 Position immediateAi = this.board.randomAImove();
                 if (immediateAi != null) this.board.makeMove(new Move(immediateAi, Cell.O));
                 System.out.print("Játékos neve: ");
@@ -67,8 +68,7 @@ public class Game {
 
     // --- start: jatek inditasa
     public void start() {
-        boolean exit = playGame(this.board, this.playerName);
-        if (exit) return;
+        playGame(this.board, this.playerName);
     }
 
     // --- jatek vegrehajtasa; visszater true-val ha a felhasznalo az exit parancsot adta vissza

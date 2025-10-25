@@ -1,0 +1,5 @@
+- 2025.10.19: git repo létrehozása, "first upload" push: alap Java/Maven + README.md
+- 2025.10.22: modelszerkezet készítése, records külön mappába, kezdetleges board model.
+- 2025.10.23: befejezett board model + alap Game.java
+- 2025.10.24: Első futtatások, emiatt sok bugfix: kiiratás problémák, mentési problémák, játékosnév bug, alap logikai hibák, stb. Ezen felül testek maximalizálása a 80%-hoz.
+- 2025.10.25: README.md változtatás, changelog.txt

@@ -6,7 +6,7 @@
 
     <groupId>hu.gombi</groupId>
     <artifactId>amoba</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.1-BACON</version>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
@@ -94,7 +94,6 @@
                 <version>3.2.0</version>
                 <configuration>
                     <configLocation>google_checks.xml</configLocation>
-                        <!-- <encoding>${project.build.sourceEncoding}</encoding> -->
                     <!-- consolse kiiratást levettem, spammel -->
                     <consoleOutput>false</consoleOutput>
                     <includeTestSourceDirectory>true</includeTestSourceDirectory>

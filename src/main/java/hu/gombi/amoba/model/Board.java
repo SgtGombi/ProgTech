@@ -12,11 +12,10 @@ public class Board {
     private final Cell[][] cells;
 
     public Board(int rows, int cols) {
-        // --- FELADATLEIRAS: 4 <=M <= N <=25
+        // --- FELADATLEIRAS: 4 <= M <= N <= 25 (M = oszlopok, N = sorok)
         // --- kulon kezeljuk a hibas tablameretet, pontos hibauzenet a usernek
         if (cols < 4 || cols > 25) throw new IllegalArgumentException("Az oszlopok számának 4 és 25 között kell lennie!");
-        if (rows < 4 || rows > 25) throw new IllegalArgumentException("A sorok számának 4 és 25 között kell lennie!");
-        if (cols > rows) throw new IllegalArgumentException("Az oszlopok száma nem lehet nagyobb a sorok számánál!");
+        if (rows < cols || rows > 25) throw new IllegalArgumentException("A sorok számának " + cols + " és 25 között kell lennie!");
 
         // --- konstruktor
         this.rows = rows;
@@ -33,9 +32,9 @@ public class Board {
         Random random = new Random();
         int xStartRow, xStartCol;
         if (rows % 2 == 0) {
-            xStartRow = rows / 2 - 1 + random.nextInt(2); // yields rows/2-1 or rows/2
+            xStartRow = rows / 2 - 1 + random.nextInt(2);
         } else {
-            xStartRow = rows / 2; // exact center for odd
+            xStartRow = rows / 2; 
         }
         if (cols % 2 == 0) {
             xStartCol = cols / 2 - 1 + random.nextInt(2);
@@ -123,7 +122,7 @@ public class Board {
                         r += dir[0];
                         c += dir[1];
                     }
-                    // win when there are 4 in a row (changed requirement)
+                    // ##### FONTOS ##### WINHEZ HANY LEPES KELLJEN! ?feladatleiras?
                     if (count >= 4) return true;
                 }
             }
