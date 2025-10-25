@@ -34,12 +34,12 @@ public class Board {
         if (rows % 2 == 0) {
             xStartRow = rows / 2 - 1 + random.nextInt(2);
         } else {
-            xStartRow = rows / 2; 
+            xStartRow = rows / 2 - 1 + random.nextInt(2); 
         }
         if (cols % 2 == 0) {
             xStartCol = cols / 2 - 1 + random.nextInt(2);
         } else {
-            xStartCol = cols / 2;
+            xStartCol = cols / 2 - 1 + random.nextInt(2);
         }
         cells[xStartRow][xStartCol] = Cell.X;
     }

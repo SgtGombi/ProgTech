@@ -19,13 +19,16 @@ KÖVETKEZTETÉS: Mivel szigorúan automatikus x kezdés van, aztán meg a gép j
 - Mivel még sosem használtam Java/Maven-t (php/laravel/python/kevés node.js amivel leginkább dolgozom) így nyilván használtam az értelmezésre, és tervezésre AI-t, magamtól nyilván nem ismertem a pluginokat, dependencies-eket.
 
 ## Projekt történet:
-### Részletes történet a GITHUB-on!
+### Részletes történet a GITHUB-on, kevésbé részletes changelog.txt-ben.
 
+## TESZT: főmappába kikerült egy TestResult.html (jacoco teszteredmény)
 
 ## Mappaszerkezet
 - amoba/
   - pom.xml
   - README.md
+  - changelog.txt
+  - TestResult.html
   - logs/
   - src/
     - main/

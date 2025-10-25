@@ -19,7 +19,7 @@ import hu.gombi.amoba.model.records.Move;
 import hu.gombi.amoba.model.records.Position;
 
 // --- Ez az osztaly teszteli a Game osztaly IO viselkedeset
-public class GameIOBehaviorTest {
+public class GameTest {
     private final PrintStream originalOut = System.out;
     private final java.io.InputStream originalIn = System.in;
 
@@ -186,5 +186,46 @@ public class GameIOBehaviorTest {
         // --- Save fajlok torolve a jatek vegen
         assertFalse(Files.exists(Path.of("board.xml")), "board.xml should be deleted after game end");
         assertFalse(Files.exists(Path.of("board.txt")), "board.txt should be deleted after game end");
+    }
+
+    // --- ellenorzi, hogy ha a tabla mar teljesen tele van a jatek indulasakor, akkor dontetlen es a mentesek torlodik
+    @Test
+    void fullBoard_atStart_resultsInDraw_and_removesSaveFiles() throws Exception {
+        // Letrehozunk egy 4x4-es mintat, ahol egy mező üres marad és semelyik játékos nem nyerhet az utolsó lépéssel
+        // Minta soronként (x = X, o = O, . = empty):
+        // xoxo
+        // oxox
+        // oxox
+        // xox.
+        Board b = new Board(4, 4);
+        String[] pattern = {"xoxo", "oxox", "oxox", "xox."};
+        for (int r = 0; r < 4; r++) {
+            for (int c = 0; c < 4; c++) {
+                char ch = pattern[r].charAt(c);
+                if (ch == 'x') b.makeMove(new Move(new Position(r, c), Cell.X));
+                else if (ch == 'o') b.makeMove(new Move(new Position(r, c), Cell.O));
+                // '.' -> leave empty
+            }
+        }
+
+        // Mentsuk el XML-be, hogy a Game konstruktor betoltse
+        XmlBoardIO.save(b, Path.of("board.xml"), "Full");
+
+        // Bemenet: human lepes az ures mezore (d4)
+        String move = "d4\n";
+        ByteArrayInputStream in = new ByteArrayInputStream(move.getBytes());
+        System.setIn(in);
+
+        ByteArrayOutputStream bos = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(bos));
+
+        Game g = new Game();
+        g.start();
+
+        String out = bos.toString();
+        assertTrue(out.contains("Döntetlen"), "After filling last cell the game should print Döntetlen. Full output: " + out);
+        // --- Save fajlok torolve a jatek vegen (vagy a dontetlen eseten)
+        assertFalse(Files.exists(Path.of("board.xml")), "board.xml should be deleted after draw");
+        assertFalse(Files.exists(Path.of("board.txt")), "board.txt should be deleted after draw");
     }
 }

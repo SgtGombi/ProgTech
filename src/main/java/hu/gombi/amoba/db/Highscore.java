@@ -26,7 +26,7 @@ public class Highscore implements AutoCloseable {
             ps.executeUpdate();
         }
     }
-    // --- winek lekérdezése csökkenő sorrendben ---
+    // --- winek lekérdezése csökkenő sorrendben
     public Map<String,Integer> top() throws SQLException {
         Map<String,Integer> res = new LinkedHashMap<>();
         try (Statement s = conn.createStatement(); ResultSet rs = s.executeQuery("SELECT name,wins FROM scores ORDER BY wins DESC")) {

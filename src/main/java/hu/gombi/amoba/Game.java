@@ -35,7 +35,7 @@ public class Game {
                 LOGGER.info("Loaded saved game from XML, player={}", this.playerName);
             }
         } catch (IOException ignored) {
-            // ignore load problems
+            //
         }
 
         if (this.board == null) {
@@ -84,26 +84,20 @@ public class Game {
                 try {
                     TextBoardIO.save(board, Path.of("board.txt"), playerName);
                     txtOk = true;
-                } catch (IOException ignored) {
-                    // txt save failed
-                }
-                try {
                     XmlBoardIO.save(board, Path.of("board.xml"), playerName);
                     xmlOk = true;
                 } catch (IOException ignored) {
-                    // xml save failed
+                    //
                 }
                 if (txtOk && xmlOk) System.out.println("Sikeresen elmentve TXT-be és XML-be.");
-                else if (txtOk) System.out.println("Sikeresen elmentve TXT-be, XML mentés sikertelen.");
-                else if (xmlOk) System.out.println("Sikeresen elmentve XML-be, TXT mentés sikertelen.");
-                else System.out.println("Mentés sikertelen mindkét formátumban.");
+                else System.out.println("Mentés sikertelen.");
                 continue;
             }
             if (cmd.equals("r")) {
                 try (Highscore repo = new Highscore("jdbc:sqlite:highscores.db")) {
                     repo.top().forEach((k, v) -> System.out.println(k + " " + v));
                 } catch (Exception ignored) {
-                    System.out.println("Eredmenyek betoltese sikertelen.");
+                    System.out.println("Eredmények betöltése sikertelen.");
                 }
                 continue;
             }
