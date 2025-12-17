@@ -11,12 +11,11 @@ public class Board {
     private final int cols;
     private final Cell[][] cells;
 
-    // default constructor: new game, place initial X
+    // --- konstruktor: tabla letrehozasa, kezdetben ures mezok
     public Board(int rows, int cols) {
         this(rows, cols, true);
     }
 
-    // overloaded constructor: allow skipping the automatic initial X (used when loading saved games)
     public Board(int rows, int cols, boolean placeInitialX) {
         // --- FELADATLEIRAS: 4 <= M <= N <= 25 (M = oszlopok, N = sorok)
         // --- kulon kezeljuk a hibas tablameretet, pontos hibauzenet a usernek
@@ -130,7 +129,6 @@ public class Board {
                         r += dir[0];
                         c += dir[1];
                     }
-                    // ##### FONTOS ##### WINHEZ HANY LEPES KELLJEN! ?feladatleiras?
                     if (count >= 4) return true;
                 }
             }

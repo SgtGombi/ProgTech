@@ -55,6 +55,10 @@ public class Game {
                 int cols = readIntInRange("Oszlopok száma (4-25): ", 4, 25);
                 int rows = readIntInRange("Sorok száma (" + cols + "-25): ", cols, 25);
                 this.board = new Board(rows, cols);
+                // empty board a feladatleírás szerint.
+                System.out.println("Feladat: A játék kezdetben üres.");
+                Board empty = new Board(rows, cols, false);
+                empty.print();
 
                 // --- logika miatt ha rogton x kezd, kell ra valasz az AI-tol is o-val.
                 Position immediateAi = this.board.randomAImove();
@@ -95,8 +99,9 @@ public class Game {
             }
             if (cmd.equals("r")) {
                 try (Highscore repo = new Highscore("jdbc:sqlite:highscores.db")) {
-                    repo.top().forEach((k, v) -> System.out.println(k + " " + v));
-                } catch (Exception ignored) {
+                    System.out.println("Név | Győzelmek");
+                    repo.top().forEach((k, v) -> System.out.println(k + " | " + v));
+                } catch (Exception e) {
                     System.out.println("Eredmények betöltése sikertelen.");
                 }
                 continue;
