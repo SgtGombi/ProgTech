@@ -1,0 +1,13 @@
+<game>
+  <meta>
+    <rows>4</rows>
+    <cols>4</cols>
+    <player>g</player>
+  </meta>
+  <board>
+    <row>....</row>
+    <row>o...</row>
+    <row>.x..</row>
+    <row>....</row>
+  </board>
+</game>

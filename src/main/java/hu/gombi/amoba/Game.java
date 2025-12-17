@@ -111,7 +111,7 @@ public class Game {
                 int row = Integer.parseInt(cmd.substring(1)) - 1;
                 Position pos = new Position(row, col);
                 if (!board.legalMove(pos)) {
-                    System.out.println("Hibas lepes");
+                    System.out.println("Hibás lépés");
                     continue;
                 }
                 board.makeMove(new Move(pos, Cell.X));

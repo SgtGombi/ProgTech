@@ -11,7 +11,13 @@ public class Board {
     private final int cols;
     private final Cell[][] cells;
 
+    // default constructor: new game, place initial X
     public Board(int rows, int cols) {
+        this(rows, cols, true);
+    }
+
+    // overloaded constructor: allow skipping the automatic initial X (used when loading saved games)
+    public Board(int rows, int cols, boolean placeInitialX) {
         // --- FELADATLEIRAS: 4 <= M <= N <= 25 (M = oszlopok, N = sorok)
         // --- kulon kezeljuk a hibas tablameretet, pontos hibauzenet a usernek
         if (cols < 4 || cols > 25) throw new IllegalArgumentException("Az oszlopok számának 4 és 25 között kell lennie!");
@@ -29,19 +35,21 @@ public class Board {
             }
         }
         // --- FELADATLEIRAS: palya EGYIK kozepso mezojere tesz automatikusan
-        Random random = new Random();
-        int xStartRow, xStartCol;
-        if (rows % 2 == 0) {
-            xStartRow = rows / 2 - 1 + random.nextInt(2);
-        } else {
-            xStartRow = rows / 2 - 1 + random.nextInt(2); 
+        if (placeInitialX) {
+            Random random = new Random();
+            int xStartRow, xStartCol;
+            if (rows % 2 == 0) {
+                xStartRow = rows / 2 - 1 + random.nextInt(2);
+            } else {
+                xStartRow = rows / 2 - 1 + random.nextInt(2);
+            }
+            if (cols % 2 == 0) {
+                xStartCol = cols / 2 - 1 + random.nextInt(2);
+            } else {
+                xStartCol = cols / 2 - 1 + random.nextInt(2);
+            }
+            cells[xStartRow][xStartCol] = Cell.X;
         }
-        if (cols % 2 == 0) {
-            xStartCol = cols / 2 - 1 + random.nextInt(2);
-        } else {
-            xStartCol = cols / 2 - 1 + random.nextInt(2);
-        }
-        cells[xStartRow][xStartCol] = Cell.X;
     }
 
     // --- GETTER, visszaadja a sorokat oszlopokat es hogy adott mezonek mi az allapota

@@ -50,7 +50,7 @@ public class XmlBoardIO {
             } else if (line.startsWith("<player>")) {
                 playerName = line.replaceAll("<player>(.*)</player>", "$1");
             } else if (line.startsWith("<row>")) { inRow = true; String rowContent = line.replaceAll("<row>(.*)</row>", "$1");
-                if (b == null && rows>0 && cols>0) b = new Board(rows, cols);
+                if (b == null && rows>0 && cols>0) b = new Board(rows, cols, false);
                 // handle single-line row content
                 for (int c=0;c<rowContent.length();c++) {
                     char ch = rowContent.charAt(c);
@@ -68,7 +68,7 @@ public class XmlBoardIO {
                 r++;
             }
         }
-        if (b == null && rows>0 && cols>0) b = new Board(rows, cols);
+        if (b == null && rows>0 && cols>0) b = new Board(rows, cols, false);
         return new SavedGame(b, playerName);
     }
     // --- xml spec karakterek escapelésére

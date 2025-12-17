@@ -13,7 +13,7 @@ public class TextBoardIO {
     // --- segedosztaly ami mentett board+jatekos nevet tartalmaz ---
     public static record SavedGame(hu.gombi.amoba.model.Board board, String playerName) {}
 
-    // --- txt mentés, jatekosnev a tetejen. ---
+    // --- txt mentes, jatekosnev a tetejen. ---
     public static void save(Board board, Path path, String playerName) throws java.io.IOException {
         StringBuilder sb = new StringBuilder();
         sb.append("PLAYER:").append(playerName).append(System.lineSeparator());
@@ -39,7 +39,7 @@ public class TextBoardIO {
         int rows = lines.size() - startRow;
         if (rows <= 0) return null;
         int cols = lines.get(startRow).length();
-        Board board = new Board(rows, cols);
+        Board board = new Board(rows, cols, false);
         for (int r = 0; r < rows; r++) {
             String line = lines.get(startRow + r);
             for (int c = 0; c < cols; c++) {

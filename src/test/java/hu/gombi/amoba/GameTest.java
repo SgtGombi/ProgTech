@@ -84,7 +84,7 @@ public class GameTest {
         g.start();
 
         String out = bos.toString();
-        assertTrue(out.contains("Hibas lepes"), "Attempting to play on occupied cell should print Hibas lepes");
+        assertTrue(out.contains("Hibás lépés"), "Foglalt cellára helyezés esetén ezt kellene kiírnia: Hibás lépés");
     }
 
     // --- ellenorzi a results parancsot es a highscore-okat
