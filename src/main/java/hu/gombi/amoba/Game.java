@@ -55,10 +55,6 @@ public class Game {
                 int cols = readIntInRange("Oszlopok száma (4-25): ", 4, 25);
                 int rows = readIntInRange("Sorok száma (" + cols + "-25): ", cols, 25);
                 this.board = new Board(rows, cols);
-                // empty board a feladatleírás szerint.
-                System.out.println("Feladat: A játék kezdetben üres.");
-                Board empty = new Board(rows, cols, false);
-                empty.print();
 
                 // --- logika miatt ha rogton x kezd, kell ra valasz az AI-tol is o-val.
                 Position immediateAi = this.board.randomAImove();

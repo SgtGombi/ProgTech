@@ -11,7 +11,7 @@ public class Board {
     private final int cols;
     private final Cell[][] cells;
 
-    // --- konstruktor: tabla letrehozasa, kezdetben ures mezok
+    // --- testhez jo
     public Board(int rows, int cols) {
         this(rows, cols, true);
     }
